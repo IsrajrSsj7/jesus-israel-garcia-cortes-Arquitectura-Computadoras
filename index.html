@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Página Web</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('https://informatecdigital.com/wp-content/uploads/2023/10/Arquitectura-Computadoras.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        overflow: auto; /* Agregado para permitir desplazamiento si el contenido es más largo que la ventana */
+    }
+    .container {
+        width: 80%;
+        margin: 50px auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .buttons {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .buttons button {
+        margin: 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+    .buttons button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<div id="inicio" class="container">
+    <h1>Contenidos</h1>
+    <ul>
+        <li><a href="unidad1.html" onclick="('unidad1')">Unidad 1</a></li>
+        <li><a href="unidad2.html" onclick="('unidad2')">Unidad 2</a></li>
+        <li><a href="unidad3.html" onclick="('unidad3')">Unidad 3</a></li>
+        <li><a href="unidad4.html" onclick="('unidad4')">Unidad 4</a></li>
+        <li><a href="practicas.html" onclick="('practicas')">Prácticas</a></li>
+    </ul>
+</div>
+
+<script>
+    function mostrarMenuSiguiente(id) {
+        var unidades = document.querySelectorAll('.container');
+        var botonMenu = document.querySelectorAll('.buttons');
+        unidades.forEach(function(unidad) {
+            if (unidad.id === id) {
+                unidad.style.display = 'block';
+            } else {
+                unidad.style.display = 'none';
+            }
+        });
+        botonMenu.forEach(function(botones) {
+            botones.style.display = 'block';
+        });
+    }
+</script>
+
+</body>
+</html>
